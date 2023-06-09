@@ -1,0 +1,3 @@
+Directory entries returned by this function are in no particular order 
+as provided by the operating system's underlying directory mechanisms. 
+Entries added or removed while iterating over the directory might not be included in the iteration results.

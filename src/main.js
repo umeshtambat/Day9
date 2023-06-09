@@ -4,13 +4,16 @@
 import { isUtf8 } from "node:buffer";
 import { sum } from "./calc.js";
 
-//how to read a file using Nodejs?
+//how to write a file using Nodejs?
 //this is an internal module
-import {readFileSync} from "node:fs";
+import {readFileSync, writeFileSync} from "node:fs";
 
 
-let filePath = "/Users/Shweta/Desktop/New folder/Day9/package.json"; 
+let filePath = "/Users/Shweta/Desktop/New folder/Day9/output.txt"; 
 
-let fileData = readFileSync(filePath ,{encoding: 'Utf-8'});
-console.log(fileData);
+let data = `Directory entries returned by this function are in no particular order 
+as provided by the operating system's underlying directory mechanisms. 
+Entries added or removed while iterating over the directory might not be included in the iteration results.`;
+writeFileSync(filePath,data);
+console.log("Write Success");
 
