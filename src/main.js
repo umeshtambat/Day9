@@ -1,13 +1,12 @@
 
 
-// 
-async function sum(n1, n2){
-    return (n1 + n2);
+import { readFile } from 'node:fs/promises';
+
+async function main () {
+    let filePath  = "C:/Users/Shweta/Desktop/New folder/Day9/package.json";
+let fileData =  await readFile(filePath , {encoding: "utf-8"});
+console.log(fileData);
+
 }
 
- async function main() {
-let output =  await sum(10,20);
-console.log(output);
- }
-
- main();
+main();
