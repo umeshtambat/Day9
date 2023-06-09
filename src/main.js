@@ -1,20 +1,17 @@
+import { MongoClient } from "mongodb";
 
+async function main() {
+  const uri = "mongodb://localhost:27017";
+  const client = new MongoClient(uri);
 
+  //Executing the query
+  const db = client.db("mydb");
+  const messageColl = db.collection("message");
+  await messageColl.insertOne({});
 
-import {readFile} from 'node:fs/promises';
-
-
-
-async function main() 
-
-{
-    try {
-let filePath = 'C:/Users/Shweta/Desktoop/New folder/Day9/package.json';
-let  fileData = await readFile(filePath, {encoding: 'utf-8'});
-console.log(fileData);
-}catch (e){console.log("Exception Occured ", e.message);
-
-}
+  //closing connection
+  await client.close();
+  console.log("Record Added");
 }
 
 main();
