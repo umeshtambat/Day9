@@ -1,13 +1,14 @@
 
 
-console.log("Hello1");
-console.log("Hello2");
+// 
+async function hello(){
+    for(let i=0; i<=100; i++){
+        console.log(i);
+    }
+}
 
-//this is non blocking
-//non blocking helps to achieve async prog
-// setTimeout(() => console.log("Hello3"),1000);
-setTimeout(() => console.log("Hello3"),0);
+console.log("Hello 1");
+hello();
+console.log("Hello 3");
 
-console.log("Hello4");
-console.log("Hello5");
 
