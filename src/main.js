@@ -1,14 +1,9 @@
 
 
 // 
-async function hello(){
-    for(let i=0; i<=100; i++){
-        console.log(i);
-    }
+async function sum(n1, n2){
+    return n1 + n2;
 }
 
-console.log("Hello 1");
-hello();
-console.log("Hello 3");
-
-
+let output = sum(10,20);
+console.log(output);
