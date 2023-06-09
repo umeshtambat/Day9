@@ -1,19 +1,13 @@
 
 
-//how to read a file using Nodejs?
-import { isUtf8 } from "node:buffer";
-import { sum } from "./calc.js";
+console.log("Hello1");
+console.log("Hello2");
 
-//how to write a file using Nodejs?
-//this is an internal module
-import {readFileSync, writeFileSync} from "node:fs";
+//this is non blocking
+//non blocking helps to achieve async prog
+// setTimeout(() => console.log("Hello3"),1000);
+setTimeout(() => console.log("Hello3"),0);
 
-
-let filePath = "/Users/Shweta/Desktop/New folder/Day9/output.txt"; 
-
-let data = `Directory entries returned by this function are in no particular order 
-as provided by the operating system's underlying directory mechanisms. 
-Entries added or removed while iterating over the directory might not be included in the iteration results.`;
-writeFileSync(filePath,data);
-console.log("Write Success");
+console.log("Hello4");
+console.log("Hello5");
 
